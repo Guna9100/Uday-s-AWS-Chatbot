@@ -22,3 +22,14 @@ Users can log in and ask AWS-related questions through a clean HTML-based interf
 ### Step 1: Install Dependencies
 ```bash
 pip install -r requirements.txt
+
+
+Step 2: Run Flask App
+python3 app.py
+
+
+Step 3: Open in Browser
+Go to: http://<your-ec2-ip>:5000
+Login using:
+Username: guna
+Password: 1234
