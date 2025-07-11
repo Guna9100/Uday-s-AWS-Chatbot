@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Chat - AWS Chatbot</title></head>
+<body>
+  <h2>Welcome to AWS Chatbot!</h2>
+  <input id="question" placeholder="Ask a question..." />
+  <button onclick="ask()">Send</button>
+  <p><strong>Reply:</strong> <span id="answer"></span></p>
+  <br><a href="/logout">Logout</a>
+
+  <script>
+    async function ask() {
+      const q = document.getElementById("question").value;
+      const res = await fetch(`/chat_api?message=${q}`);
+      const text = await res.text();
+      document.getElementById("answer").innerText = text;
+    }
+  </script>
+</body>
+</html>
